@@ -394,6 +394,8 @@ extern const FFCodec ff_webp_decoder;
 extern const FFCodec ff_wcmv_decoder;
 extern const FFCodec ff_wrapped_avframe_encoder;
 extern const FFCodec ff_wrapped_avframe_decoder;
+extern const FFCodec ff_wrapped_avframe_audio_encoder;
+extern const FFCodec ff_wrapped_avframe_audio_decoder;
 extern const FFCodec ff_wmv1_encoder;
 extern const FFCodec ff_wmv1_decoder;
 extern const FFCodec ff_wmv2_encoder;

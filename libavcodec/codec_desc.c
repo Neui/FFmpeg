@@ -3694,7 +3694,14 @@ static const AVCodecDescriptor codec_descriptors[] = {
         .id        = AV_CODEC_ID_WRAPPED_AVFRAME,
         .type      = AVMEDIA_TYPE_VIDEO,
         .name      = "wrapped_avframe",
-        .long_name = NULL_IF_CONFIG_SMALL("AVFrame to AVPacket passthrough"),
+        .long_name = NULL_IF_CONFIG_SMALL("AVFrame video to AVPacket passthrough"),
+        .props     = AV_CODEC_PROP_LOSSLESS,
+    },
+    {
+        .id        = AV_CODEC_ID_WRAPPED_AVFRAME_AUDIO,
+        .type      = AVMEDIA_TYPE_AUDIO,
+        .name      = "wrapped_avframe_audio",
+        .long_name = NULL_IF_CONFIG_SMALL("AVFrame audio to AVPacket passthrough"),
         .props     = AV_CODEC_PROP_LOSSLESS,
     },
     {

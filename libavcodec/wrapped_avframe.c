@@ -120,3 +120,20 @@ const FFCodec ff_wrapped_avframe_decoder = {
     .p.id           = AV_CODEC_ID_WRAPPED_AVFRAME,
     FF_CODEC_DECODE_CB(wrapped_avframe_decode),
 };
+
+const FFCodec ff_wrapped_avframe_audio_encoder = {
+    .p.name         = "wrapped_avframe_audio",
+    CODEC_LONG_NAME("AVFrame audio to AVPacket passthrough"),
+    .p.type         = AVMEDIA_TYPE_AUDIO,
+    .p.id           = AV_CODEC_ID_WRAPPED_AVFRAME_AUDIO,
+    .p.capabilities = AV_CODEC_CAP_ENCODER_REORDERED_OPAQUE,
+    FF_CODEC_ENCODE_CB(wrapped_avframe_encode),
+};
+
+const FFCodec ff_wrapped_avframe_audio_decoder = {
+    .p.name         = "wrapped_avframe_audio",
+    CODEC_LONG_NAME("AVPacket to AVFrame audio passthrough"),
+    .p.type         = AVMEDIA_TYPE_AUDIO,
+    .p.id           = AV_CODEC_ID_WRAPPED_AVFRAME_AUDIO,
+    FF_CODEC_DECODE_CB(wrapped_avframe_decode),
+};
